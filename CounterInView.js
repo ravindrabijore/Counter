@@ -7,9 +7,9 @@ const CounterInView = (props) => {
   const [count, setCount] = useState(0);
   const counterRef = useRef(null);
 
-  let start = props.start;
-  const end = props.end; // Set your desired end value here
-  const duration = props.duration; // Set animation duration in milliseconds
+  let start = props.start?props.start:0;
+  const end = props.end?props.end:100; // Set your desired end value here
+  const duration = props.duration?props.duration:2000; // Set animation duration in milliseconds
   let totalSteps = duration / 16; // Number of steps (assuming 60fps)
 
 
